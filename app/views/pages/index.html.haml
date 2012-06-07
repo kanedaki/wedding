@@ -1,0 +1,35 @@
+.gallery
+  .carousel.slide#myCarousel
+    .carousel-inner
+      .active.item
+        %img{src: '/assets/gallery/P1040710.JPG'}
+        .carousel-caption
+          %h4 Castillo de Sant Feliu
+          %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+      .item
+        %img{src: '/assets/gallery/P1040703.JPG'}
+        .carousel-caption
+          %h4 Castillo de Sant Feliu
+          %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+      .item
+        %img{src: '/assets/gallery/P1040707.JPG'}
+        .carousel-caption
+          %h4 Castillo de Sant Feliu
+          %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+    <!-- Carousel nav -->
+    %a.carousel-control.left{href:'#myCarousel', data: {slide: 'prev'}}
+      &lsaquo;
+    %a.carousel-control.right{href:'#myCarousel', data: {slide: 'next'}}
+      &rsaquo;
+.container-fluid
+  .row-fluid
+    .span12
+      .info
+        %h2 Info
+    .span12
+      .music
+        %h2 Music
+        %p We are waiting for your music. Add it to our collaborative spotify list and we promise you will listen to it during the wedding almost for sure
+        %a.btn.btn-success.btn-large{href: "http://open.spotify.com/user/kanedaki/playlist/4zFQ6gPliHbmrkW92hjsdv", target: "_blank"}
+          Go to our spotify list
+        <iframe src="https://embed.spotify.com/?uri=spotify:user:kanedaki:playlist:4zFQ6gPliHbmrkW92hjsdv" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
