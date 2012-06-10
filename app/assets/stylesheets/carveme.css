@@ -1,0 +1,21 @@
+/* CarveMe by @simurai  */
+
+#text {
+  text-align: center;
+  font: bold 10em 'Droid Sans', sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.2); /* Text stroke */
+  }
+
+#text:hover {
+  -webkit-text-stroke: 0;
+  color: transparent;
+  background-color: rgba(82,96,117,0.5);
+  -webkit-background-clip: text;
+  text-shadow: rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+  -webkit-transition: text-shadow .1s ease-out, background-color .2s ease-out;
+    }
+
+#text:focus {
+  outline: none;
+}

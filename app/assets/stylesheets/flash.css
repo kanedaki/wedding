@@ -1,0 +1,128 @@
+* FLASH-LIGHT by @simurai  */
+
+
+/* Global ------------------------------------------------------ */
+
+html {
+  overflow: hidden; /*FF fix*/
+  height: 100%;
+  font-family: Geneva, sans-serif;
+  background: url(/assets/pattern.png), -webkit-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+  background: url(/assets/pattern.png),    -moz-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+  background: url(/assets/pattern.png),     -ms-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+  background: url(/assets/pattern.png),      -o-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+  background: url(/assets/pattern.png),         radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%));
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    display: -webkit-box;
+    display:    -moz-box;
+    display:     -ms-box;
+    display:      -o-box;
+    display:         box;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+}
+
+
+p {
+  margin: 0;
+  }
+
+
+  /* box ------------------------------------------------------ */
+
+  #box {
+    padding: 100px;
+    text-align: center;
+    min-width: 500px;
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+
+  /* flashlight ------------------------------------------------------ */
+
+  #flashlight {
+    color: hsla(0,0%,0%,0);
+
+    -webkit-perspective: 80px;
+    -moz-perspective: 30px;
+    -ms-perspective: 80px;
+    -o-perspective: 80px;
+    perspective: 80px;          
+  }
+
+  #flashlight:focus {
+    outline: none;
+  }
+
+
+  /* flash ------------------------------------------------------ */
+
+  #flash {
+    display: inline-block;
+    text-shadow: #bbb 0 0 1px, #fff 0 -1px 2px, #fff 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;
+
+    -webkit-transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+    -moz-transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+    -ms-transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+    -o-transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+    transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+  }
+
+  #box:hover #flash {
+    margin-left: 20px;
+
+    -webkit-transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+    -moz-transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+    -ms-transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+    -o-transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+    transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+  }
+
+
+  /* light ------------------------------------------------------ */
+
+  #light {
+    display: inline-block;
+    text-shadow: #111 0 0 1px, rgba(255,255,255,0.1) 0 1px 3px;
+  }
+
+  #box:hover #light {
+    text-shadow: #fff 0 0 4px, #fcffbb 0 0 20px;
+
+    -webkit-transform: rotateY(-60deg);
+    -moz-transform: rotateY(-20deg);
+    -ms-transform: rotateY(-60deg);
+    -o-transform: rotateY(-60deg);
+    transform: rotateY(-60deg);
+
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+    -moz-transition:    -moz-transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+    -ms-transition:     -ms-transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+    -o-transition:      -o-transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+    transition:         transform 0.3s cubic-bezier(0, 0.75, 0, 1), text-shadow 0.1s ease-out;
+  }
+
