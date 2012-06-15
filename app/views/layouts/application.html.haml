@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title 
+      Wedding - Nos casamos!!!
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %link{href: 'http://fonts.googleapis.com/css?family=Lobster', rel: 'stylesheet', type: 'text/css'}
+  %body
+    .container-fluid
+      .row-fluid
+        #topbar
+          #text
+            Sara Y Miguel
+        .gallery
+          .carousel.slide#myCarousel
+            .carousel-inner
+              .active.item
+                %img{src: '/assets/gallery/P1040710.JPG'}
+                .carousel-caption
+                  %h4 Castillo de Sant Feliu
+                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+              .item
+                %img{src: '/assets/gallery/P1040703.JPG'}
+                .carousel-caption
+                  %h4 Castillo de Sant Feliu
+                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+              .item
+                %img{src: '/assets/gallery/P1040707.JPG'}
+                .carousel-caption
+                  %h4 Castillo de Sant Feliu
+                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+            <!-- Carousel nav -->
+            %a.carousel-control.left{href:'#myCarousel', data: {slide: 'prev'}}
+              &lsaquo;
+            %a.carousel-control.right{href:'#myCarousel', data: {slide: 'next'}}
+              &rsaquo;
+        = yield

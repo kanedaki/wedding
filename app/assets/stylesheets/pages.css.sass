@@ -1,61 +1,4 @@
-@mixin button($height: 44px, $width: 180px)
-  background-attachment: scroll, scroll
-  background-clip: border-box, border-box
-  background-color: #BFBFBF
-  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.699219))), url(http://lab.simurai.com/buttons/noise.png)
-  background-origin: padding-box, padding-box
-  border-bottom-color: rgba(0, 0, 0, 0.0976563)
-  border-bottom-left-radius: 8px
-  border-bottom-right-radius: 8px
-  border-bottom-style: solid
-  border-bottom-width: 1px
-  border-top-color: rgba(255, 255, 255, 0.796875)
-  border-top-left-radius: 8px
-  border-top-right-radius: 8px
-  border-top-style: solid
-  border-top-width: 1px
-  box-shadow: rgba(255, 254, 255, 0.597656) 0px 7px 7px 0px inset, rgba(0, 0, 0, 0.148438) 0px -2px 7px 0px inset, #999 0px 2px 3px 0px, #737373 0px 7px 1px 0px, rgba(0, 0, 0, 0.199219) 0px 12px 5px 0px
-  color: #666
-  cursor: auto
-  display: inline-block
-  font-family: 'Droid Sans', sans-serif
-  font-size: 24px
-  font-style: normal
-  font-variant: normal
-  font-weight: bold
-  height: $height
-  line-height: 24px
-  margin-bottom: 12px
-  margin-left: 12px
-  margin-right: 12px
-  margin-top: 12px
-  padding-bottom: 9px
-  padding-left: 14px
-  padding-right: 14px
-  padding-top: 12px
-  position: relative
-  text-align: center
-  text-decoration: none
-  text-shadow: rgba(255, 255, 255, 0.496094) 0px 1px 0px
-  width: $width
-  &:focus
-    outline: none
-    color: rgba(254, 255, 255, 0.9) !important
-    text-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px
-  &:hover
-    background-color: #D4D4D4
-    text-decoration: none
-    color: rgba(254, 255, 255, 0.9) !important
-
-@mixin skew
-  border-top: none
-  padding-right: 1.2em
-  padding-left: 0.8em
-  -webkit-border-radius: 5em 1em / 5em 1em
-  -moz-border-radius: 5em 1em / 5em 1em
-  border-radius: 5em 1em / 5em 1em
-
-@mixin text($width: auto, $height: 160px, $font-size: 47px)
+@mixin text($width: auto, $height: 120px, $font-size: 47px)
   background-attachment: scroll
   background-clip: text
   background-color: rgba(82, 96, 117, 0.496094)
@@ -63,9 +6,7 @@
   background-origin: padding-box
   color: transparent
   display: block
-  font-family: 'Droid Sans', sans-serif
   font-size: $font-size
-  font-style: normal
   font-variant: normal
   font-weight: bold
   height: $height
@@ -89,11 +30,11 @@
   -webkit-transition: text-shadow .1s ease-out, background-color .2s ease-out
 
 .container-fluid
+  font-family: 'Lobster', cursive
   padding-right: 0px
   padding-left: 0px
   color: white
   #topbar
-    margin-top: 20px
     #box
       background: url('/assets/pattern.png'), -webkit-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%))
       background: url('/assets/pattern.png'),    -moz-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%))
@@ -101,61 +42,91 @@
       background: url('/assets/pattern.png'),      -o-radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%))
       background: url('/assets/pattern.png'),         radial-gradient( hsl(210, 30%, 20%), hsl(210, 30%, 0%))
     #text
+      padding-bottom: 10px
+      border-bottom: 2px solid #aaa
       background-image: url('/assets/background-natural-paper.png')
   .gallery
     .carousel
       margin-bottom: 0px
       .carousel-inner
         .item
-          height: 300px
+          height: 340px
           overflow: hidden
           img
+            min-height: 300px
             position: relative
             bottom: 125px
   .info
     margin-left: 0px
-    height: 150px
+    padding-left: 50px
     text-align: center
     background-image: url('/assets/background-natural-paper.png')
     .subinfo
-      background-color: white
       color: #999
-      height: 130px
-      width: 391px
-      margin: 10px
+      text-decoration: none
+      min-height: 130px
+      max-width: 391px
+      min-width: 250px
+      margin: 30px 30px 30px 10px
       display: inline-block
-      border-radius: 30px
-      box-shadow: 1px 2px 2px #CCC
       .title
         h3
-          position: absolute
-          margin-top: 20px
-          display: inline
+          margin-top: 10px
       .caption
         p
-          position: absolute
-          margin-top: 50px
-          display: inline
-        display: inline
+          font-size: 14px
+          margin: 10px 10px 10px 10px
+    .arrow
+      width: 118px
+      margin: 93px 10px 10px 0px
+      float: right
 
   .music
-    height: 160px
     margin-left: 0px
     background-image: url('/assets/background-green.jpg')
     .caption
       @include text
     .list
+      display: inline
       position: relative
-      bottom: 97px
-      left: 25px
-      float: left
+      bottom: 50px
+      margin-left: 20px
     .go
+      width: 124px
       position: relative
-      bottom: 100px
-      right: 50px
+      bottom: 60px
       float: right
-      a
-        @include button
-        @include skew
+      display: inline
+      margin-right: 20px
+      text-decoration: none
+      color: #555
 
+#where
+  .title
+    max-width: 600px
 
+#where, #suggestions, #questions
+  background-image: url("/assets/background-natural-paper.png")
+  color: #666
+  min-height: 390px
+  .title
+    margin: 30px 30px 30px 30px
+    display: inline-block
+    font-size: 20px
+    p
+      margin-bottom: 20px
+    .subtitle
+      margin-left: 10px
+      font-size: 17px
+      p
+        color: #444
+    .body
+      margin-left: 20px
+      font-size: 15px
+    a
+      float: right
+  .map
+    border: 1px solid #999
+    margin: 20px 20px 20px 20px
+    float: right
+    display: inline

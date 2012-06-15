@@ -2,8 +2,8 @@
 
 #text {
   text-align: center;
-  font: bold 10em 'Droid Sans', sans-serif;
-  color: transparent;
+  font: bold 10em 'Lobster', sans-serif;
+  color: #fff;
   -webkit-text-stroke: 1px rgba(0,0,0,0.2); /* Text stroke */
   }
 
