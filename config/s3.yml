@@ -7,6 +7,6 @@ test:
   access_key_id: AKIAJSKKP3V7P4JM7IQQ
   secret_access_key: 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
 production:
-  bucket: wedding
+  bucket: wedding-pro
   access_key_id: AKIAJSKKP3V7P4JM7IQQ
   secret_access_key: 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
