@@ -1,7 +1,10 @@
 class PhotosController < ApplicationController
   def create
-    @photo = Photo.create( params[:photo] )
+    @photo = Photo.create!( params[:photo] )
     @photos = Photo.order('random()').all
-    render 'pages/index'
+    redirect_to '/'
+  rescue Exception => e
+    puts e.inspect
+    redirect_to '/'
   end
 end
