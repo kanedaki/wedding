@@ -8,6 +8,9 @@ gem 'rails', '3.2.2'
 gem 'haml'
 gem 'pg'
 gem "paperclip", "~> 3.0"
+gem "aws-sdk"
+gem "aws-s3"
+
 
 group :production do
   gem 'pg'
