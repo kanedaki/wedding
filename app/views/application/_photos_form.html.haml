@@ -1,0 +1,19 @@
+.modal.hide#photos_form
+  .modal-header
+    %button{type: "button", class: "close", data: {dismiss: "modal"}} ×
+    %h3 
+      Sube tu foto
+  = form_for :photo, :url => photos_path, :html => { :multipart => true } do |form|
+    .modal-body
+      %p Comparte con nosotros ese momento que conservas en fotografía y cuéntanos como sucedió
+      .title
+        %p Título
+        = form.text_field :title
+      .description
+        %p Descripción
+        = form.text_field :description
+      = form.file_field :image
+
+    .modal-footer
+      %a{href: "#", class: "btn", data: {dismiss: "modal"}} Cerrar
+      .btn.btn-primary#submit-photo= form.submit 'Subir'

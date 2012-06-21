@@ -16,24 +16,17 @@
         .gallery
           .carousel.slide#myCarousel
             .carousel-inner
-              .active.item
-                %img{src: '/assets/gallery/P1040710.JPG'}
-                .carousel-caption
-                  %h4 Castillo de Sant Feliu
-                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
-              .item
-                %img{src: '/assets/gallery/P1040703.JPG'}
-                .carousel-caption
-                  %h4 Castillo de Sant Feliu
-                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
-              .item
-                %img{src: '/assets/gallery/P1040707.JPG'}
-                .carousel-caption
-                  %h4 Castillo de Sant Feliu
-                  %p En Gerona, en Castell de Fells, dando una vuelta por el castillo. Increiblemente bonito
+              - @photos.each_with_index do |p, i|
+                .item{class: i == 0 ? "active" : ""}
+                  %img{src: p.image.url}
+                  .carousel-caption
+                    %h4= p.title
+                    %p= p.description
             <!-- Carousel nav -->
             %a.carousel-control.left{href:'#myCarousel', data: {slide: 'prev'}}
               &lsaquo;
             %a.carousel-control.right{href:'#myCarousel', data: {slide: 'next'}}
               &rsaquo;
+            %a.btn.btn-large#photos-button{data: {toggle: "modal"}, href: "#photos_form"} Sube tu foto
         = yield
+        = render partial: "photos_form"

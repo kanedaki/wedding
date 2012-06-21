@@ -3,4 +3,7 @@ Wedding::Application.routes.draw do
   get '/where' => 'pages#where', as: :where
   get '/questions' => 'pages#questions', as: :questions
   get '/suggestions' => 'pages#suggestions', as: :suggestions
+
+  #photos
+  resources :photos, only: [:create]
 end

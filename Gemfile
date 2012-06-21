@@ -6,6 +6,8 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml'
+gem 'pg'
+gem "paperclip", "~> 3.0"
 
 group :production do
   gem 'pg'

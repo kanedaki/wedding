@@ -30,6 +30,7 @@
   -webkit-transition: text-shadow .1s ease-out, background-color .2s ease-out
 
 .container-fluid
+  background-image: url("/assets/background-natural-paper.png")
   font-family: 'Lobster', cursive
   padding-right: 0px
   padding-left: 0px
@@ -50,7 +51,7 @@
       margin-bottom: 0px
       .carousel-inner
         .item
-          height: 340px
+          height: 400px
           overflow: hidden
           img
             min-height: 300px
@@ -67,7 +68,7 @@
       min-height: 130px
       max-width: 391px
       min-width: 250px
-      margin: 30px 30px 30px 10px
+      margin: 0px 30px 30px 10px
       display: inline-block
       .title
         h3
@@ -130,3 +131,25 @@
     margin: 20px 20px 20px 20px
     float: right
     display: inline
+
+#photos-button
+  float: right
+  position: relative
+  margin-right: 10px
+  bottom: 45px
+
+#photos_form
+  color: #666
+  form
+    margin-bottom: 0px
+    #submit-photo
+      input
+        border: none
+        background-image: -webkit-linear-gradient(top, #08C, #05C)
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#08C), to(#05C))
+        background-image: -ms-linear-gradient(top, #08C, #05C)
+        background-image: -o-linear-gradient(top, #08C, #05C)
+        background-image: -moz-linear-gradient(top, #08C, #05C)
+        background-image: linear-gradient(top, #08C, #05C)
+        color: #fff
+
